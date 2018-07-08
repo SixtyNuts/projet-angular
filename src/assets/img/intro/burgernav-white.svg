@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2713 73 32.195 32.195">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="navbar_mobile_dark" data-name="navbar mobile dark" transform="translate(-2729 33)">
+    <rect id="rectangle" class="cls-1" width="32.195" height="32.195" transform="translate(16 40)"/>
+    <path id="navbar_mobile" class="cls-2" d="M3,22.1H27.146V19.415H3V22.1ZM3,15.39H27.146V12.707H3V15.39ZM3,6V8.683H27.146V6Z" transform="translate(17.024 42.049)"/>
+  </g>
+</svg>

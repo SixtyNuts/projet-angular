@@ -1,0 +1,17 @@
+<section class="activities" id="activities">
+    <h1>Activités ludiques</h1>
+    <main>
+        <div class="carrousel">
+            <app-home-activity-card *ngFor="let activity of activities"
+                [ngClass]="{active: isCurrentActivity(activity)}"
+                [activity]="activity"
+                [isActive]="isCurrentActivity(activity)">
+            </app-home-activity-card>
+        </div>
+        <div class="dot-carrousel">
+            <a href="#" class="arrow-prev" (click)="selectPrevious($event)"></a>
+            <div class="dot" [ngClass]="{active: isCurrentActivity(activity)}" *ngFor="let activity of activities"></div>
+            <a href="#" class="arrow-next" (click)="selectNext($event)"></a>
+        </div>
+    </main>
+</section>

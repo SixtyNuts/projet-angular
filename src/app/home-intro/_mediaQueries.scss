@@ -1,0 +1,64 @@
+@import '../../scss/variables';
+
+@media screen and (max-height: $md-breakpoint) {
+    // A partir de ce breakpoint, le header atteint sa taille minimale de 3.125rem
+    .intro {
+        padding-top: $home-header-min-height;
+    }
+}
+
+@media screen and (max-height: 470px) {
+    .intro {
+        padding-top: 6rem;
+
+        main {
+            h2 {
+                margin-top: 1rem;
+            }
+
+            .logo {
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                height: 6rem;
+
+                img {
+                    position: absolute;
+                    top: -5.1875em;
+                    //max-height: 5.625rem;
+
+                    &:not(.top) {
+                        display: none;
+                    }
+                }
+
+                .top {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.intro {
+    main {
+        .logo {
+            svg {
+                @media screen and (min-width: $md-breakpoint) {
+                    width: 65%;
+                }
+                @media screen and (min-width: $lg-breakpoint) {
+                    width: 80%;
+                }
+                @media screen and (min-width: $xl-breakpoint) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media screen and (min-height: 640px) {
+        footer .signup, main h2 {
+            margin-top: 1.5em;
+        }
+    }
+}

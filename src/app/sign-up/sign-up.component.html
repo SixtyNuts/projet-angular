@@ -1,0 +1,113 @@
+<header class="hexa-pattern">
+    <a class="btn-back-arrow" routerLink="/">
+        <i class="icon-arrow-left2"></i>
+    </a>
+</header>
+<main>
+    <div class="title">
+        <i class="icon-sign-up"></i>
+        <h1>Inscription</h1>
+    </div>
+    <button mat-raised-button color="accent" class="btn btn-medium btn-sign-facebook" type="submit">
+        <i class="icon-facebook"></i>
+        Facebook
+    </button>
+    <button mat-raised-button color="accent" class="btn btn-medium btn-sign-google" type="submit">
+        <i class="icon-google-plus"></i>
+        Google
+    </button>
+    <div class="separat-or">
+        <span>Ou</span>
+    </div>    
+    <form (ngSubmit)="register(userForm)" [formGroup]="userForm">
+        <div class="input input-username">          
+            <mat-form-field>
+                <input matInput 
+                  placeholder="Nom d'utilisateur"
+                  type="text"
+                  name="username"
+                  class="valid"
+                  [ngClass]="{'error': usernameCtrl.dirty && usernameCtrl.invalid, 'valid': usernameCtrl.dirty && !usernameCtrl.hasError('alreadyUsed')}"
+                  formControlName="username"
+                  required
+                />
+            </mat-form-field>
+            <!--@TODO: Faire un composant singleInputMessage qui gère un unique message ou une zone vide -->
+            <!--@TODO: Faire un composant inputErrorMessage -->
+            <!--@TODO: Faire un composant inputSuccessMessage -->
+            <div *ngIf="!hasUsernameMessage()" style="visibility: hidden">
+                <i class="icon-input-valid"></i>
+                <p>-</p>
+            </div>
+            <div *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Vous devez saisir un nom d'utilisateur</p>
+            </div>
+            <div *ngIf="isUsernameAvailable === false" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Ce nom d'utilisateur n'est pas disponible</p>
+            </div>
+            <div *ngIf="isUsernameAvailable === true" class="message message-valid">
+                <i class="icon-input-valid"></i>
+                <p>Ce nom d'utilisateur est disponible</p>
+            </div>
+        </div>
+        <div class="input input-email">
+            <mat-form-field>
+                <input matInput 
+                placeholder="Adresse email" 
+                type="email"
+                name="email"
+                [ngClass]="{'error': emailCtrl.dirty && emailCtrl.invalid}"
+                formControlName="email"
+                required>
+            </mat-form-field>
+            <div *ngIf="!hasEmailMessage()" style="visibility: hidden">
+                <i class="icon-input-valid"></i>
+                <p>-</p>
+            </div>
+            <div *ngIf="emailCtrl.dirty && emailCtrl.hasError('required')" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Vous devez saisir une adresse email</p>
+            </div>
+            <div *ngIf="emailCtrl.dirty && emailCtrl.hasError('email')" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Adresse email invalide</p>
+            </div>
+            <div *ngIf="isEmailAvailable === false" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Cette adresse email est déjà enregistrée</p>
+            </div>
+        </div>  
+        <div class="input input-password">
+            <mat-form-field>
+                <input matInput
+                placeholder="Mot de passe"
+                type="password"
+                name="password"
+                class="valid"
+                [ngClass]="{'error': passwordCtrl.dirty && passwordCtrl.invalid}"
+                formControlName="password"
+                required>
+            </mat-form-field>
+            <div *ngIf="!hasPasswordMessage()" style="visibility: hidden">
+                <i class="icon-input-valid"></i>
+                <p>-</p>
+            </div>
+            <div *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Vous devez saisir un mot de passe</p>
+            </div>
+            <div *ngIf="passwordCtrl.dirty && !passwordCtrl.hasError('required') && passwordCtrl.hasError('minLength')" class="message message-error">
+                <i class="icon-input-error"></i>
+                <p>Votre mot de passe doit faire 6 caractères minimum</p>
+            </div>
+        </div>
+        <button mat-raised-button color="accent" class="btn btn-hobbpink-gradient" type="submit">Inscription</button>
+    </form>
+</main>
+<footer class="sign">
+    <div class="sign-grey">
+        <p>Vous avez déjà un compte ? <a routerLink="/connexion">Connexion</a></p>
+    </div>        
+</footer>

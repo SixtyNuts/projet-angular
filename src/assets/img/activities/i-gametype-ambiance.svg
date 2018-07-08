@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2835.25 1511.085 39.416 35.337">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dc2e6f;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        filter: url(#Logo-Ombre);
+      }
+    </style>
+    <filter id="Logo-Ombre" x="-2835.25" y="1511.085" width="39.416" height="35.337" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_3905" data-name="Groupe 3905" transform="translate(-2885 61)">
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 2885, -61)">
+      <path id="Logo-Ombre-2" data-name="Logo-Ombre" class="cls-1" d="M22.83,0H15.136S8.588.036,7.586.036C5.045,4.4,2.541,8.8,0,13.2c2.541,4.4,5.081,8.767,7.622,13.132H22.83c2.5-4.4,5.045-8.8,7.586-13.168C27.839,8.767,25.335,4.366,22.83,0Z" transform="translate(-2830.75 1513.59)"/>
+    </g>
+    <g id="Groupe_634" data-name="Groupe 634" transform="translate(63.495 1459.472)">
+      <path id="Tracé_86" data-name="Tracé 86" class="cls-2" d="M11.965.123A.374.374,0,0,0,11.68,0h-.009A14.5,14.5,0,0,1,6.023.843,14.481,14.481,0,0,1,.384,0H.375A.378.378,0,0,0,.091.123a.4.4,0,0,0-.1.3L.678,8.6a5.372,5.372,0,0,0,10.69,0L12.059.426a.359.359,0,0,0-.095-.3ZM2.355,4.842c.085-.4.72-.6,1.421-.445s1.2.588,1.118.986-.72.6-1.421.445-1.2-.588-1.118-.986ZM8.43,9.2a2.518,2.518,0,0,1-4.8,0,.339.339,0,0,1,.047-.284.328.328,0,0,1,.256-.133,9.136,9.136,0,0,0,2.17.739,7.511,7.511,0,0,0,2.018-.739.3.3,0,0,1,.256.133A.308.308,0,0,1,8.43,9.2Zm.142-3.374c-.7.152-1.336-.047-1.421-.445s.417-.834,1.118-.986,1.336.047,1.421.445-.417.834-1.118.986Zm0,0" transform="translate(0.015)"/>
+    </g>
+  </g>
+</svg>

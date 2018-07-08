@@ -1,0 +1,13 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.homepage section {
+    &.intro, &.incentives, &.activities {
+        min-height: 20em;
+        min-width: 200px;
+    }
+}
+
+a:hover {
+    color: $accentColor;
+}

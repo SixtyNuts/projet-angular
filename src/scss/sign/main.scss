@@ -1,0 +1,341 @@
+app-sign-up, app-sign-in, app-forgot-password {
+
+    background: $gradient-verylightgrey;
+    min-height: 100vh;
+    display: block;
+
+    @import "angularMaterialOverride";
+
+    header {
+
+        display: flex;
+        align-items: center;
+
+        height: rem(90px);
+
+    }
+
+    main {
+
+        display: grid;
+
+        grid-template-areas: "title  title"
+        "btn-facebook  btn-google"
+        "separator  separator"
+        "form  form";
+
+        grid-gap: rem(15px);
+        
+        width: 85%;
+        max-width: rem(400px);
+
+        margin: auto;                    
+
+        .title { 
+
+            grid-area: title;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: rem(32px);
+            font-weight: 300;
+            color: $darkgrey;
+
+            margin: rem(25px 0 10px 0);
+
+            i {
+
+                font-size: rem(33px);
+                
+                margin: rem(2px 10px 0 0);
+
+            }
+
+        }
+
+        .btn-sign-facebook { grid-area: btn-facebook; justify-self: center; }
+
+        .btn-sign-google { grid-area: btn-google; justify-self: center; }
+
+        .separat-or { 
+
+            grid-area: separator;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: rem(11px);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $darkgrey;
+
+            margin: rem(16px 0);
+            
+            &:after, &:before {
+
+                content: "";
+
+                height: rem(1px);
+                width: 45%;
+
+                background: $grey;
+
+            }
+
+        }
+
+        form { 
+            
+            grid-area: form;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input[type="submit"] {
+
+                border: none;
+
+                &:hover{
+
+                    cursor: pointer;
+
+                }
+
+            }
+
+            .input {
+
+                position: relative;
+
+                margin-bottom: rem(10px);
+
+                width: 100%;
+
+                &.input-email-username {
+
+                    margin-bottom: rem(20px);
+
+                }
+
+                label {
+
+                    position: absolute;
+                    top: rem(19px);
+                    left: 0;
+
+                    font-size: rem(15px); 
+                    font-weight: 300;
+                    color: $grey;
+
+                    padding-left: rem(15px);
+
+                }
+
+                input {
+
+                    width: 100%;
+                    height: rem(50px);
+
+                    border: none;
+
+                    font-size: rem(15px); 
+                    color: $darkgrey;
+
+                    padding-left: rem(15px);
+                    padding-top: 15px;
+
+                    box-shadow: $shadow-input;
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+                    &:focus {
+                        
+                        outline: none;
+
+                        width: 100%;
+                        
+                        padding-top: rem(15px);
+
+                        box-shadow: $shadow-input-focus;
+
+                        +label {
+
+                            top: rem(8px);
+
+                            font-size: rem(12px); 
+                            font-weight: 500;   
+
+                        }
+
+                        &.valid {
+
+                            border-bottom: rem(2px solid $purple);
+
+                            +label {
+
+                                color: $purple;
+
+                            }
+                            
+                            +div {
+
+                                color: $purple;
+
+                            }
+    
+                        }
+        
+                        &.error {
+
+                            border-bottom: rem(3px solid $red);
+
+                            +label {
+
+                                color: $red;
+
+                            }
+
+                            +div {
+
+                                color: $red;
+
+                            }
+                            
+    
+                        }    
+    
+                    }
+
+                }
+
+                .message {
+
+                    display: flex;
+                    align-items: center;
+
+                    height: rem(30px);
+
+                    font-size: rem(12px);
+                    font-weight: 500;
+                    color: inherit;
+                    
+                    margin-top: rem(5px);
+                    padding-left: rem(15px);
+
+                    &.message-valid {
+
+                        color: $purple;
+
+                        .icon-input-valid {
+
+                            position: absolute;
+                            top: rem(16px);
+                            right: rem(13px);
+
+                            font-size: rem(18px);
+
+                        }
+
+                    }
+
+                    &.message-error {
+
+                        color: $red;
+
+                        .icon-input-error {
+
+                            position: absolute;
+                            top: rem(16px);
+                            right: rem(13px);
+
+                            font-size: rem(18px);
+
+                        }
+
+
+                    }
+                    
+                }
+
+
+            }
+
+                        
+
+            .checkbox {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+
+                margin-bottom: rem(15px);
+
+                input[type=checkbox] {
+
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    outline: none;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    height: rem(18px);
+                    width: rem(18px);
+
+                    border-radius: rem(5px);
+                    box-shadow: $shadow-input;
+
+                    background: $white;
+
+                    margin-right: rem(9px);
+    
+                    &:checked {
+
+                        border: rem(2px solid $purple);
+
+                        color: $purple;
+
+                        &:before {
+                        
+                            font-family: 'icomoon';
+                            content: "\e914";
+                            font-size: rem(9px);
+
+                        }
+                    }
+                
+                }
+
+                label {
+
+                    font-size: rem(15px);
+                    color: $darkgrey;
+
+                    margin-top: rem(2px);
+
+                }
+
+
+            }
+        
+        }
+
+    }
+
+    footer.sign {
+
+        .forgot-password {
+
+            border-bottom: 1px solid $grey; 
+        }
+
+    }
+
+}

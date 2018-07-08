@@ -1,0 +1,19 @@
+<header [ngClass]="{'open-nav': isOpen}">
+  <nav [ngClass]="{'open-nav': isOpen}">
+    <div class="icon-burgernav icon-burgernav-white" *ngIf="!isOpen" (click)="open()"></div>
+    <div class="main-nav">
+        <a href="#intro" class="home active" (click)="close()">Accueil</a>
+        <a href="#incentives" class="incentives" (click)="close()">6 bonnes raisons d'utiliser Hobbees</a>  
+        <a href="#activities" class="activities" (click)="close()">Activités ludiques</a> 
+    </div>
+    <div class="signup">
+        <a routerLink="/inscription">Inscription</a>
+    </div>
+    <div class="signin">
+        <a routerLink="/connexion">Connexion</a>
+    </div>
+    <div class="logo">
+        <img src="/assets/img/nav/logo-hobbees-bigshadow.svg" alt="Logo Hobbees">
+    </div>
+  </nav>
+</header>

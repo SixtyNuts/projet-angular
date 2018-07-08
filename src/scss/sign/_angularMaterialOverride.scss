@@ -1,0 +1,103 @@
+mat-form-field.mat-form-field {
+    width: 100%;
+
+    input {
+        background-color: white;
+    }
+    
+
+    &.mat-focused {
+        .mat-form-field-label {
+            font-size: 0.75rem;
+        }
+        &:not(.mat-form-field-invalid) {
+            .mat-form-field-ripple {
+                background-color: $purple;
+            }
+            .mat-form-field-label {
+                color: $purple;
+            }
+        }
+        &.mat-form-field-invalid {
+            .mat-form-field-ripple {
+                background-color: $red;
+            }
+            .mat-form-field-label {
+                color: $red;
+            }
+        }
+
+        &.mat-form-field-should-float {
+            .mat-form-field-label-wrapper {
+                top: rem(6px);
+                padding-top: rem(6px);
+            }
+        }
+    }
+    // mat-focused mat-form-field-should-float
+
+    .mat-form-field-infix {
+        border-top: 0px;
+    }
+    
+    .mat-form-field-label-wrapper {
+        top: 0;
+        padding-top: 0;
+    }
+
+    &.ng-dirty .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: $red;
+    }
+    &:not(.ng-dirty) .mat-form-field-label {
+        color: $grey;
+    }
+    
+    &.mat-form-field-appearance-legacy {
+
+        &:not(.mat-focused).mat-form-field-hide-placeholder .mat-form-field-label:not(.mat-form-field-empty) {
+            top: rem(28px);
+        }
+        
+        .mat-form-field-ripple {
+            height: 0.1875rem;
+        }
+
+        .mat-form-field-infix {
+            padding: 0;
+        }
+
+        &.mat-form-field-can-float.mat-form-field-should-float {
+            .mat-form-field-label {
+                font-size: 1rem;
+                font-weight: 500;
+                transform: translateY(-1.28125em) scale(.75);
+                width: 133.33333%;
+                top: rem(20px);
+            }
+
+            &:not(.mat-form-field-invalid) .mat-form-field-label {
+                color: $purple;
+            }
+            &.mat-form-field-invalid .mat-form-field-label {
+                color: $red;
+            }
+        }
+        
+        &:not(.mat-form-field-invalid) .mat-form-field-label {
+            top: 1rem;
+            color: $grey;
+        }
+
+        .mat-form-field-underline {
+            top: 3em;
+        }
+
+        .mat-form-field-wrapper {
+            padding-bottom: 0;
+        }
+    }
+
+    .mat-input-element {
+        caret-color: $purple;
+    }   
+}

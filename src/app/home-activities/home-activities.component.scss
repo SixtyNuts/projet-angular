@@ -1,0 +1,93 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+section.activities {
+
+    background: linear-gradient($verylightgrey 100%, white 0%);
+    padding-bottom: 5.625em; // Pour éviter le chevauchement avec le footer. un margin-top sur le footer provoque un trou de background...
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.9rem;
+        text-align: center;
+    }
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .carrousel {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 31rem;
+            overflow: hidden;
+
+            app-home-activity-card {
+                width: 28%;
+                margin: 0 0.5rem;
+                min-width: 16.5rem;
+
+                &.active {
+                    width: 35%;
+                    min-width: 18rem;
+                }
+            }
+
+        }
+
+        .dot-carrousel {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:2.5rem;
+
+            .dot {
+
+                @include responsive-background("/assets/img/activities/dot-carrousel.svg", 0.4375rem, 0.4375rem);
+                margin: 0.3rem;
+                min-width: 0.35rem;
+
+                &.active {
+
+                    @include responsive-background("/assets/img/activities/dot-carrousel-active.svg", 0.6875rem, 0.6875rem);
+                    min-width: 0.55rem;
+
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            
+            }
+
+            .arrow-prev {
+
+                @include responsive-background("/assets/img/activities/arrow-prev.svg", 1.6rem, 0.57rem);
+                margin-right: 1rem;
+                min-width: 0.5rem;
+
+            }
+
+            .arrow-next {
+
+                @include responsive-background("/assets/img/activities/arrow-next.svg", 1.6rem, 0.57rem);
+                margin-left: 1rem;
+                min-width: 0.5rem;
+
+            }
+
+
+        }
+
+
+    }
+
+}
