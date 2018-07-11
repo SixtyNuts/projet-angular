@@ -125,7 +125,7 @@ export class SignInComponent {
         this.sentCredentials = userForm.value;
         this.authenticationService.login(userForm.value).subscribe(
           token => {
-            this.authenticationService.setCurrentUserToken(token);
+            this.authenticationService.authenticate(token);
             this.router.navigate(['/evenements']);
           },
           error => {

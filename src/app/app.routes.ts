@@ -4,32 +4,39 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { EventsComponent } from './events/events.component';
+import {RealTimeLoggedInGuard} from './shared/services/real-time-logged-in-guard.service';
+import {IsAnonymousGuardGuard} from './shared/services/is-anonymous-guard.guard';
 
 export const ROUTES: Routes = [
     {
         path: '',
         component: HomeComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+        canActivate: [IsAnonymousGuardGuard]
     },
     {
         path: 'connexion',
         component: SignInComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+        canActivate: [IsAnonymousGuardGuard]
     },
     {
         path: 'inscription',
         component: SignUpComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+        canActivate: [IsAnonymousGuardGuard]
     },
     {
         path: 'mot-de-passe-oublie',
         component: ForgotPasswordComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+        canActivate: [IsAnonymousGuardGuard]
     },
     {
         path: 'evenements',
         component: EventsComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+        canActivate: [RealTimeLoggedInGuard]
     },
     {
         path: '**',

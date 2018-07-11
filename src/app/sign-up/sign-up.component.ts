@@ -65,7 +65,7 @@ export class SignUpComponent {
     this.passwordCtrl.markAsDirty();
     this.authenticationService.register(userForm.value).subscribe(
       token => {
-        this.authenticationService.setCurrentUserToken(token);
+        this.authenticationService.authenticate(token);
         this.router.navigate(['/evenements']);
       },
       error => console.log(error) // @TODO: traiter l'erreur
