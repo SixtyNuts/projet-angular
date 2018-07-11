@@ -1,0 +1,9 @@
+<div class="message" [ngClass]="{
+                'message-error': formFieldMessage?.type === 'error',
+                'message-valid': formFieldMessage?.type === 'success'
+            }">
+  <i *ngIf="formFieldMessage?.type == 'error'" class="icon-input-error"></i>
+  <i *ngIf="formFieldMessage?.type == 'success'" class="icon-input-valid"></i>
+  <span *ngIf="formFieldControl.status === 'PENDING'">...</span>
+  <p>{{ formFieldMessage?.message }}</p>
+</div>

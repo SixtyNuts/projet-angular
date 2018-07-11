@@ -24,6 +24,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { EventsComponent } from './events/events.component';
+import { FormFieldMessageComponent } from './shared/components/form-field-message/form-field-message.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { EventsComponent } from './events/events.component';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    EventsComponent
+    EventsComponent,
+    FormFieldMessageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Activity } from '../shared/model/Activity';
+import { Activity } from '../shared/models/Activity';
 
 @Component({
   selector: 'app-home-activity-card',
