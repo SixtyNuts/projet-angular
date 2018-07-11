@@ -1,3 +1,60 @@
-<p>
-  sign-in works!
-</p>
+<header class="hexa-pattern">
+    <a class="btn-back-arrow" routerLink="/">
+        <i class="icon-arrow-left2"></i>
+    </a>
+</header>
+<main>
+    <div class="title">
+        <i class="icon-sign-in"></i>
+        <h1>Connexion</h1>
+    </div>
+    <button mat-raised-button color="accent" class="btn btn-medium btn-sign-facebook" type="submit">
+        <i class="icon-facebook"></i>
+        Facebook
+    </button>
+    <button mat-raised-button color="accent" class="btn btn-medium btn-sign-google" type="submit">
+        <i class="icon-google-plus"></i>
+        Google
+    </button>
+    <div class="separat-or">
+        <span>Ou</span>
+    </div>
+    <form (ngSubmit)="login(userForm)" [formGroup]="userForm">
+        <div class="input input-username">
+            <mat-form-field>
+                <input matInput
+                  placeholder="Nom d'utilisateur"
+                  type="text"
+                  name="username"
+                  [ngClass]="{'error': usernameMessage?.type == 'error'}"
+                  formControlName="username"
+                  required
+                />
+            </mat-form-field>
+            <app-form-field-message [formFieldMessage]="usernameMessage" [formFieldControl]="usernameCtrl"></app-form-field-message>
+        </div>
+        <div class="input input-password">
+            <mat-form-field>
+                <input matInput
+                placeholder="Mot de passe"
+                type="password"
+                name="password"
+                [ngClass]="{'error': passwordMessage?.type == 'error'}"
+                formControlName="password"
+                required>
+            </mat-form-field>
+            <app-form-field-message [formFieldMessage]="passwordMessage" [formFieldControl]="passwordCtrl"></app-form-field-message>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" name="remember-me" id="remember-me" value="Se souvenir de moi" checked>
+            <label for="remember-me">Se souvenir de moi</label>
+        </div>
+        <button mat-raised-button color="accent" class="btn btn-hobbpink-gradient" type="submit">Connexion</button>
+    </form>
+</main>
+<footer class="sign">
+    <div class="sign-grey">
+        <p class="forgot-password"><a routerLink="/mot-de-passe-oublie">Mot de passe oublié</a></p>
+        <p>Vous n'avez pas de compte ? <a routerLink="/inscription">Inscription</a></p>
+    </div>
+</footer>

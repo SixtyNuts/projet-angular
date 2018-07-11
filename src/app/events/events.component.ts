@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../authentication.service';
+import { AuthenticationService } from '../shared/services/authentication.service';
 
 @Component({
   selector: 'app-events',
@@ -8,12 +8,9 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class EventsComponent implements OnInit {
 
-  currentUser: any;
-
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
-    this.currentUser = this.authenticationService.currentUser;
   }
 
 }

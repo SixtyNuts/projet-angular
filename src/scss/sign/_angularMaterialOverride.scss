@@ -4,7 +4,6 @@ mat-form-field.mat-form-field {
     input {
         background-color: white;
     }
-    
 
     &.mat-focused {
         .mat-form-field-label {
@@ -18,7 +17,7 @@ mat-form-field.mat-form-field {
                 color: $purple;
             }
         }
-        &.mat-form-field-invalid {
+        &.mat-form-field-invalid, &.error {
             .mat-form-field-ripple {
                 background-color: $red;
             }
@@ -45,7 +44,7 @@ mat-form-field.mat-form-field {
         padding-top: 0;
     }
 
-    &.ng-dirty .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    &.ng-dirty .mat-form-field.mat-form-field-invalid .mat-form-field-label, &.ng-dirty .mat-form-field.error .mat-form-field-label {
         color: $red;
     }
     &:not(.ng-dirty) .mat-form-field-label {
@@ -78,8 +77,10 @@ mat-form-field.mat-form-field {
             &:not(.mat-form-field-invalid) .mat-form-field-label {
                 color: $purple;
             }
-            &.mat-form-field-invalid .mat-form-field-label {
-                color: $red;
+            &.mat-form-field-invalid, &.error {
+                .mat-form-field-label {
+                    color: $red;
+                }
             }
         }
         

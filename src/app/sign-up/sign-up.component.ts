@@ -1,18 +1,17 @@
-import {Component, ViewEncapsulation, DoCheck } from '@angular/core';
+import {Component, ViewEncapsulation } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { AuthenticationService } from '../shared/services/authentication.service';
 import { Router } from '@angular/router';
 import { FormFieldMessage } from '../shared/models/FormFieldMessage';
-import {ValidateEmailIsAvailable} from '../shared/validators/async-email.validator';
-import {ValidateUsernameIsAvailable} from '../shared/validators/async-username.validator';
+import { ValidateEmailIsAvailable } from '../shared/validators/async-email.validator';
+import { ValidateUsernameIsAvailable } from '../shared/validators/async-username.validator';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent implements DoCheck {
+export class SignUpComponent {
 
   userForm: FormGroup;
   usernameCtrl: FormControl;
@@ -32,6 +31,10 @@ export class SignUpComponent implements DoCheck {
         'asyncValidators': ValidateUsernameIsAvailable.createValidator(authenticationService)
       }
     );
+    this.usernameCtrl.statusChanges.subscribe(next => {
+      this.usernameMessage = this.getUsernameMessage();
+    });
+
     this.emailCtrl = new FormControl(
       '',
       {
@@ -40,10 +43,13 @@ export class SignUpComponent implements DoCheck {
         'asyncValidators': ValidateEmailIsAvailable.createValidator(authenticationService)
       }
     );
+    this.emailCtrl.statusChanges.subscribe(next => {
+      this.emailMessage = this.getEmailMessage();
+    });
+
     this.passwordCtrl = new FormControl('', [Validators.required, Validators.minLength(6)]);
     this.passwordCtrl.statusChanges.subscribe(next => {
       this.passwordMessage = this.getPasswordMessage();
-      console.log(next, this.passwordMessage);
     });
 
     this.userForm = new FormGroup({
@@ -146,11 +152,5 @@ export class SignUpComponent implements DoCheck {
       }
     }
     return null;
-  }
-
-  ngDoCheck() {
-    this.usernameMessage = this.getUsernameMessage();
-    this.emailMessage = this.getEmailMessage();
-    this.passwordMessage = this.getPasswordMessage();
   }
 }

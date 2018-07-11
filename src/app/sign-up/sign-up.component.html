@@ -26,8 +26,7 @@
                   placeholder="Nom d'utilisateur"
                   type="text"
                   name="username"
-                  class="valid"
-                  [ngClass]="{'error': usernameCtrl.dirty && usernameCtrl.invalid, 'valid': usernameCtrl.dirty && !usernameCtrl.hasError('alreadyUsed')}"
+                  [ngClass]="{'error': usernameMessage?.type == 'error'}"
                   formControlName="username"
                   required
                 />
@@ -40,7 +39,7 @@
                 placeholder="Adresse email"
                 type="email"
                 name="email"
-                [ngClass]="{'error': emailCtrl.dirty && emailCtrl.invalid}"
+                [ngClass]="{'error': emailMessage?.type == 'error'}"
                 formControlName="email"
                 required>
             </mat-form-field>
@@ -52,8 +51,7 @@
                 placeholder="Mot de passe"
                 type="password"
                 name="password"
-                class="valid"
-                [ngClass]="{'error': passwordCtrl.dirty && passwordCtrl.invalid}"
+                [ngClass]="{'error': passwordMessage?.type == 'error'}"
                 formControlName="password"
                 required>
             </mat-form-field>
