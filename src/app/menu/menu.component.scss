@@ -120,6 +120,10 @@ nav {
                 &.incentives:before { background-image: url(/assets/img/nav/i-incentives.svg) }
                 &.activities:before { background-image: url(/assets/img/nav/i-activities.svg) }
 
+                &.active {
+                    color: $accentColor;
+                }
+
                 &.active, &:hover {
                     font-size: 1.1rem;
                     font-weight: 700;
@@ -174,7 +178,7 @@ nav {
             padding: 0;
 
             &:hover {
-                background: #dc2e6f;
+                background: $accentColor;
                 color: white;
             }
 

@@ -13,8 +13,10 @@ export class MenuComponent implements OnInit {
 
   isOpen = false;
   displayedOnCurrentRoute = true;
+  private fragment: string;
 
   constructor(private overlayService: OverlayService,
+    private route: ActivatedRoute,
     private router: Router,
     public authenticationService: AuthenticationService
   ) { }
@@ -25,6 +27,8 @@ export class MenuComponent implements OnInit {
         filter(isDisplayed => isDisplayed === false)
       )
       .subscribe(() => this.isOpen = false);
+
+    this.route.fragment.subscribe(fragment => this.fragment = fragment);
 
     this.router.events
       .pipe( filter(event => event instanceof ResolveStart) )
@@ -48,5 +52,4 @@ export class MenuComponent implements OnInit {
     this.overlayService.hide('main');
     this.isOpen = false;
   }
-
 }

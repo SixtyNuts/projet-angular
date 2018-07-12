@@ -3,9 +3,57 @@
     <ng-container *ngIf="authenticationService.currentUserToken == null">
         <div class="icon-burgernav icon-burgernav-white" *ngIf="!isOpen" (click)="open()"></div>
         <div class="main-nav">
-            <a routerLink="/evenements#intro" routerLinkActive="active" class="home" (click)="close()">Accueil</a>
-            <a routerLink="/evenements#incentives" routerLinkActive="active" class="incentives" (click)="close()">6 bonnes raisons d'utiliser Hobbees</a>
-            <a routerLink="/evenements#activities" routerLinkActive="active" class="activities" (click)="close()">Activités ludiques</a>
+            <a  *ngIf="fragment === 'intro'"
+                routerLink="/"
+                routerLinkActive="active"
+                fragment="intro"
+                class="home"
+                (click)="close()"
+            >
+                Accueil
+            </a>
+            <a  *ngIf="fragment !== 'intro'"
+                routerLink="/"
+                fragment="intro"
+                class="home"
+                (click)="close()"
+            >
+                Accueil
+            </a>
+            <a  *ngIf="fragment === 'incentives'"
+                routerLink="/"
+                routerLinkActive="active"
+                fragment="incentives"
+                class="incentives"
+                (click)="close()"
+            >
+                6 bonnes raisons d'utiliser Hobbees
+            </a>
+            <a  *ngIf="fragment !== 'incentives'"
+                routerLink="/"
+                fragment="incentives"
+                class="incentives"
+                (click)="close()"
+            >
+                6 bonnes raisons d'utiliser Hobbees
+            </a>
+            <a  *ngIf="fragment === 'activities'"
+                routerLink="/"
+                routerLinkActive="active"
+                fragment="activities"
+                class="activities"
+                (click)="close()"
+            >
+                Activités ludiques
+            </a>
+            <a  *ngIf="fragment !== 'activities'"
+                routerLink="/"
+                fragment="activities"
+                class="activities"
+                (click)="close()"
+            >
+                Activités ludiques
+            </a>
         </div>
         <div class="signup">
             <a routerLink="/inscription">Inscription</a>

@@ -27,6 +27,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { EventsComponent } from './events/events.component';
 import { FormFieldMessageComponent } from './shared/components/form-field-message/form-field-message.component';
+import {FragmentPolyfillModule} from '../fragment-polyfill/fragment-polyfill.module';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,10 @@ import { FormFieldMessageComponent } from './shared/components/form-field-messag
     MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
