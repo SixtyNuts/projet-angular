@@ -139,9 +139,11 @@ nav {
             bottom: 0px;
             position: absolute;
             width: 50vw;
+            $logoWidth: rem(120px);
 
             &.signup, &.settings {
                 left: 0;
+                padding-right: $logoWidth / 2;
 
                 @media screen and (max-width: $lg-breakpoint) {
                     a {
@@ -152,6 +154,7 @@ nav {
             }
             &.signin, &.signout {
                 right: 0;
+                padding-left: $logoWidth / 2;
 
                 @media screen and (max-width: $lg-breakpoint) {
                     a {
