@@ -18,13 +18,19 @@ export const ROUTES: Routes = [
         path: 'connexion',
         component: SignInComponent,
         pathMatch: 'full',
-        canActivate: [IsAnonymousGuardGuard]
+        canActivate: [IsAnonymousGuardGuard],
+        data: {
+            menuDisabled: true
+        }
     },
     {
         path: 'inscription',
         component: SignUpComponent,
         pathMatch: 'full',
-        canActivate: [IsAnonymousGuardGuard]
+        canActivate: [IsAnonymousGuardGuard],
+        data: {
+            menuDisabled: true
+        }
     },
     {
         path: 'mot-de-passe-oublie',

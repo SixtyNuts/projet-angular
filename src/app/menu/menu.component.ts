@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OverlayService } from '../overlay.service';
 import { filter } from 'rxjs/operators';
-import { Router, ResolveStart } from '@angular/router';
+import { Router, ResolveStart, NavigationEnd, ActivatedRoute, RouteConfigLoadEnd, ActivationEnd } from '@angular/router';
+import { AuthenticationService } from '../shared/services/authentication.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,30 +12,40 @@ import { Router, ResolveStart } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   isOpen = false;
+  displayedOnCurrentRoute = true;
 
-  constructor(private overlayService: OverlayService, private router: Router) { }
+  constructor(private overlayService: OverlayService,
+    private router: Router,
+    public authenticationService: AuthenticationService
+  ) { }
 
   ngOnInit() {
-    this.overlayService.getStatusObservable('home')
+    this.overlayService.getStatusObservable('main')
       .pipe(
         filter(isDisplayed => isDisplayed === false)
       )
       .subscribe(() => this.isOpen = false);
 
     this.router.events
-        .pipe( filter(event => event instanceof ResolveStart) )
-        .subscribe((event) => {
-          this.overlayService.hide('home');
-        });
+      .pipe( filter(event => event instanceof ResolveStart) )
+      .subscribe((event) => {
+        this.overlayService.hide('main');
+      });
+
+    this.router.events
+      .pipe( filter(event => event instanceof ActivationEnd) )
+      .subscribe((event: ActivationEnd) => {
+        this.displayedOnCurrentRoute = event.snapshot.data.menuDisabled ? false : true;
+      });
   }
 
   open() {
-    this.overlayService.display('home');
+    this.overlayService.display('main');
     this.isOpen = true;
   }
 
   close() {
-    this.overlayService.hide('home');
+    this.overlayService.hide('main');
     this.isOpen = false;
   }
 

@@ -1,17 +1,43 @@
-<header [ngClass]="{'open-nav': isOpen}">
+<header [ngClass]="{'open-nav': isOpen}" *ngIf="displayedOnCurrentRoute">
   <nav [ngClass]="{'open-nav': isOpen}">
-    <div class="icon-burgernav icon-burgernav-white" *ngIf="!isOpen" (click)="open()"></div>
-    <div class="main-nav">
-        <a href="#intro" class="home active" (click)="close()">Accueil</a>
-        <a href="#incentives" class="incentives" (click)="close()">6 bonnes raisons d'utiliser Hobbees</a>  
-        <a href="#activities" class="activities" (click)="close()">Activités ludiques</a> 
-    </div>
-    <div class="signup">
-        <a routerLink="/inscription">Inscription</a>
-    </div>
-    <div class="signin">
-        <a routerLink="/connexion">Connexion</a>
-    </div>
+    <ng-container *ngIf="authenticationService.currentUserToken == null">
+        <div class="icon-burgernav icon-burgernav-white" *ngIf="!isOpen" (click)="open()"></div>
+        <div class="main-nav">
+            <a routerLink="/evenements#intro" routerLinkActive="active" class="home" (click)="close()">Accueil</a>
+            <a routerLink="/evenements#incentives" routerLinkActive="active" class="incentives" (click)="close()">6 bonnes raisons d'utiliser Hobbees</a>
+            <a routerLink="/evenements#activities" routerLinkActive="active" class="activities" (click)="close()">Activités ludiques</a>
+        </div>
+        <div class="signup">
+            <a routerLink="/inscription">Inscription</a>
+        </div>
+        <div class="signin">
+            <a routerLink="/connexion">Connexion</a>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="authenticationService.currentUserToken != null">
+        <!--@TODO : Menu à designer pour la partie connectée -->
+        <div class="icon-burgernav icon-burgernav-white black" *ngIf="!isOpen" (click)="open()"></div>
+        <div class="main-nav">
+            <a routerLink="/evenements" class="events" (click)="close()">Évènements</a>
+            <a routerLink="/recherche-de-jeux" class="search-game" (click)="close()">Rechercher un jeu</a>
+            <a routerLink="/profil" class="profile" (click)="close()">Mon profil</a>
+            <a routerLink="/adresses" class="addresses" (click)="close()">Mes adresses</a>
+            <a routerLink="/amis" class="friends" (click)="close()">Mes amis</a>
+            <a routerLink="/beecoins" class="beecoins" (click)="close()">Mes Beecoins</a>
+            <a routerLink="/envies" class="wishlist" (click)="close()">Ma liste d'envies</a>
+            <a routerLink="/notifications" class="notifications" (click)="close()">Notifications</a>
+            <a href="/profil" class="activities" (click)="close()">
+                <div>Avatar</div>
+                <div>Pseudo</div>
+            </a>
+        </div>
+        <div class="settings">
+            <a routerLink="/parametres">Paramètres</a>
+        </div>
+        <div class="signout">
+            <a routerLink="/deconnexion">Déconnexion</a>
+        </div>
+    </ng-container>
     <div class="logo">
         <img src="/assets/img/nav/logo-hobbees-bigshadow.svg" alt="Logo Hobbees">
     </div>
