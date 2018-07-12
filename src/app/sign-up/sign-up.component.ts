@@ -17,11 +17,14 @@ export class SignUpComponent {
   usernameCtrl: FormControl;
   emailCtrl: FormControl;
   passwordCtrl: FormControl;
+  acceptTermsControl: FormControl;
+  hidePassword = true;
 
   usernameMessage: FormFieldMessage = null;
   emailMessage: FormFieldMessage = null;
   passwordMessage: FormFieldMessage = null;
 
+  // @TODO : Remplacer le texte du bouton par un loader, ou intégrer un loader dans le bouton du formulaire pendant la soumission
   constructor(private authenticationService: AuthenticationService, private router: Router) {
     this.usernameCtrl = new FormControl(
       '',
@@ -52,10 +55,13 @@ export class SignUpComponent {
       this.passwordMessage = this.getPasswordMessage();
     });
 
+    this.acceptTermsControl = new FormControl(false);
+
     this.userForm = new FormGroup({
       username: this.usernameCtrl,
       email: this.emailCtrl,
-      password: this.passwordCtrl
+      password: this.passwordCtrl,
+      acceptTerms: this.acceptTermsControl
     });
   }
 
@@ -63,13 +69,16 @@ export class SignUpComponent {
     this.usernameCtrl.markAsDirty();
     this.emailCtrl.markAsDirty();
     this.passwordCtrl.markAsDirty();
-    this.authenticationService.register(userForm.value).subscribe(
-      token => {
-        this.authenticationService.authenticate(token);
-        this.router.navigate(['/evenements']);
-      },
-      error => console.log(error) // @TODO: traiter l'erreur
-    );
+
+    if (this.userForm.valid) {
+      this.authenticationService.register(userForm.value).subscribe(
+        token => {
+          this.authenticationService.authenticate(token);
+          this.router.navigate(['/evenements']);
+        },
+        error => console.log(error) // @TODO: traiter l'erreur (nécessite le design des erreurs de niveau formulaire)
+      );
+    }
   }
 
   private getUsernameMessage(): FormFieldMessage {

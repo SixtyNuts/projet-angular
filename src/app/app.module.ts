@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule, MatInputModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
@@ -51,6 +53,8 @@ import { FormFieldMessageComponent } from './shared/components/form-field-messag
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

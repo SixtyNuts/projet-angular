@@ -4,4 +4,27 @@
 @import 'icomoon';
 
 @import 'sign/main.scss';
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import '~@angular/material/theming';
+@include mat-core();
+@import 'material/palettes';
+
+$my-app-primary: mat-palette($md-mcgpalette-blue);
+$my-app-accent:  mat-palette($md-mcgpalette-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($md-mcgpalette-red);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.hobbees-purple-theme {
+  $alternate-primary: mat-palette($md-mcgpalette-purple);
+  $alternate-accent:  mat-palette($md-mcgpalette-purple, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+
+  @include angular-material-theme($alternate-theme);
+  .mat-form-field.mat-focused.ng-invalid.ng-dirty .mat-form-field-ripple {
+    background-color: $red;
+  }
+}
