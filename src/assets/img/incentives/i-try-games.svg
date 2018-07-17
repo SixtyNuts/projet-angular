@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2633.763 1117.77 39.763 56.03">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
   <defs>
     <style>
       .cls-1 {
@@ -38,21 +38,24 @@
       }
     </style>
   </defs>
-  <g id="Picto-EssaisJeux" transform="translate(-2633.763 1117.77)">
-    <path id="Tracé_103" data-name="Tracé 103" class="cls-1" d="M39.763,71.763V32H0V83.512H27.648Zm0,0" transform="translate(0 -27.481)"/>
-    <path id="Tracé_104" data-name="Tracé 104" class="cls-2" d="M39.763,71.763V32H0" transform="translate(0 -27.481)"/>
-    <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-3" width="39.763" height="6.326"/>
-    <path id="Tracé_105" data-name="Tracé 105" class="cls-4" d="M0,0H39.763V6.326"/>
-    <path id="Tracé_106" data-name="Tracé 106" class="cls-5" d="M43.386,101.993A6.693,6.693,0,1,1,36.693,95.3a6.689,6.689,0,0,1,6.693,6.693Zm0,0" transform="translate(-25.764 -81.843)"/>
-    <path id="Tracé_107" data-name="Tracé 107" class="cls-6" d="M65.3,128.589l3.431,3.431a6.618,6.618,0,0,0,4.97-6.51v-.184L71.075,122.8Zm0,0" transform="translate(-56.079 -105.46)"/>
-    <path id="Tracé_108" data-name="Tracé 108" class="cls-1" d="M50.51,135.887a.835.835,0,0,1,0,1.087l-.635.635a.835.835,0,0,1-1.087,0L46.076,134.9a.835.835,0,0,1,0-1.087l.635-.635a.835.835,0,0,1,1.087,0Zm0,0" transform="translate(-39.397 -114.198)"/>
-    <path id="Tracé_109" data-name="Tracé 109" class="cls-1" d="M65.578,119.076a.835.835,0,0,1,1.087,0l.635.635a.835.835,0,0,1,0,1.087l-4.7,4.7a.835.835,0,0,1-1.087,0l-.635-.635a.835.835,0,0,1,0-1.087Zm0,0" transform="translate(-52.107 -102.089)"/>
-    <path id="Tracé_110" data-name="Tracé 110" class="cls-7" d="M43.386,242.193a6.693,6.693,0,1,1-6.693-6.693,6.689,6.689,0,0,1,6.693,6.693Zm0,0" transform="translate(-25.764 -202.246)"/>
-    <path id="Tracé_111" data-name="Tracé 111" class="cls-8" d="M65.3,268.789l3.431,3.431a6.618,6.618,0,0,0,4.97-6.51v-.169L71.075,263Zm0,0" transform="translate(-56.079 -225.863)"/>
-    <path id="Tracé_112" data-name="Tracé 112" class="cls-1" d="M50.51,275.387a.835.835,0,0,1,0,1.087l-.635.635a.835.835,0,0,1-1.087,0L46.076,274.4a.835.835,0,0,1,0-1.087l.635-.635a.835.835,0,0,1,1.087,0Zm0,0" transform="translate(-39.397 -234)"/>
-    <path id="Tracé_113" data-name="Tracé 113" class="cls-1" d="M65.578,258.576a.835.835,0,0,1,1.087,0l.635.635a.835.835,0,0,1,0,1.087L62.6,265a.835.835,0,0,1-1.087,0l-.635-.635a.835.835,0,0,1,0-1.087Zm0,0" transform="translate(-52.107 -221.891)"/>
-    <path id="Tracé_114" data-name="Tracé 114" class="cls-9" d="M210.148,313.6H198.4v11.381Zm0,0" transform="translate(-170.385 -269.318)"/>
-    <path id="Tracé_115" data-name="Tracé 115" class="cls-8" d="M159.781,276.1c0,.635-.537.9-1.172.9H145.872c-.635,0-1.172-.268-1.172-.9s.537-.9,1.172-.9h12.737c.635,0,1.172.268,1.172.9Zm0,0" transform="translate(-124.268 -236.34)"/>
-    <path id="Tracé_116" data-name="Tracé 116" class="cls-6" d="M159.781,135.3c0,.635-.537.9-1.172.9H145.872c-.635,0-1.172-.268-1.172-.9s.537-.9,1.172-.9h12.737c.635,0,1.172.268,1.172.9Zm0,0" transform="translate(-124.268 -115.422)"/>
+  <g id="Groupe_5102" data-name="Groupe 5102" transform="translate(-242 -1056)">
+    <rect id="Rectangle_2307" data-name="Rectangle 2307" class="cls-1" width="57" height="57" transform="translate(242 1056)"/>
+    <g id="Picto-EssaisJeux" transform="translate(251 1056)">
+      <path id="Tracé_103" data-name="Tracé 103" class="cls-1" d="M39.763,71.763V32H0V83.512H27.648Zm0,0" transform="translate(0 -27.481)"/>
+      <path id="Tracé_104" data-name="Tracé 104" class="cls-2" d="M39.763,71.763V32H0" transform="translate(0 -27.481)"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-3" width="39.763" height="6.326"/>
+      <path id="Tracé_105" data-name="Tracé 105" class="cls-4" d="M0,0H39.763V6.326"/>
+      <path id="Tracé_106" data-name="Tracé 106" class="cls-5" d="M43.386,101.993A6.693,6.693,0,1,1,36.693,95.3a6.689,6.689,0,0,1,6.693,6.693Zm0,0" transform="translate(-25.764 -81.843)"/>
+      <path id="Tracé_107" data-name="Tracé 107" class="cls-6" d="M65.3,128.589l3.431,3.431a6.618,6.618,0,0,0,4.97-6.51v-.184L71.075,122.8Zm0,0" transform="translate(-56.079 -105.46)"/>
+      <path id="Tracé_108" data-name="Tracé 108" class="cls-1" d="M50.51,135.887a.835.835,0,0,1,0,1.087l-.635.635a.835.835,0,0,1-1.087,0L46.076,134.9a.835.835,0,0,1,0-1.087l.635-.635a.835.835,0,0,1,1.087,0Zm0,0" transform="translate(-39.397 -114.198)"/>
+      <path id="Tracé_109" data-name="Tracé 109" class="cls-1" d="M65.578,119.076a.835.835,0,0,1,1.087,0l.635.635a.835.835,0,0,1,0,1.087l-4.7,4.7a.835.835,0,0,1-1.087,0l-.635-.635a.835.835,0,0,1,0-1.087Zm0,0" transform="translate(-52.107 -102.089)"/>
+      <path id="Tracé_110" data-name="Tracé 110" class="cls-7" d="M43.386,242.193a6.693,6.693,0,1,1-6.693-6.693,6.689,6.689,0,0,1,6.693,6.693Zm0,0" transform="translate(-25.764 -202.246)"/>
+      <path id="Tracé_111" data-name="Tracé 111" class="cls-8" d="M65.3,268.789l3.431,3.431a6.618,6.618,0,0,0,4.97-6.51v-.169L71.075,263Zm0,0" transform="translate(-56.079 -225.863)"/>
+      <path id="Tracé_112" data-name="Tracé 112" class="cls-1" d="M50.51,275.387a.835.835,0,0,1,0,1.087l-.635.635a.835.835,0,0,1-1.087,0L46.076,274.4a.835.835,0,0,1,0-1.087l.635-.635a.835.835,0,0,1,1.087,0Zm0,0" transform="translate(-39.397 -234)"/>
+      <path id="Tracé_113" data-name="Tracé 113" class="cls-1" d="M65.578,258.576a.835.835,0,0,1,1.087,0l.635.635a.835.835,0,0,1,0,1.087L62.6,265a.835.835,0,0,1-1.087,0l-.635-.635a.835.835,0,0,1,0-1.087Zm0,0" transform="translate(-52.107 -221.891)"/>
+      <path id="Tracé_114" data-name="Tracé 114" class="cls-9" d="M210.148,313.6H198.4v11.381Zm0,0" transform="translate(-170.385 -269.318)"/>
+      <path id="Tracé_115" data-name="Tracé 115" class="cls-8" d="M159.781,276.1c0,.635-.537.9-1.172.9H145.872c-.635,0-1.172-.268-1.172-.9s.537-.9,1.172-.9h12.737c.635,0,1.172.268,1.172.9Zm0,0" transform="translate(-124.268 -236.34)"/>
+      <path id="Tracé_116" data-name="Tracé 116" class="cls-6" d="M159.781,135.3c0,.635-.537.9-1.172.9H145.872c-.635,0-1.172-.268-1.172-.9s.537-.9,1.172-.9h12.737c.635,0,1.172.268,1.172.9Zm0,0" transform="translate(-124.268 -115.422)"/>
+    </g>
   </g>
 </svg>

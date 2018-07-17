@@ -1,36 +1,41 @@
-@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
-	$responsive-unitless: $responsive / ($responsive - $responsive + 1);
-	$dimension: if(unit($responsive) == 'vh', 'height', 'width');
-	$min-breakpoint: $min / $responsive-unitless * 100;
-	
-	@media (max-#{$dimension}: #{$min-breakpoint}) {
-		font-size: $min;
-	}
-	
-	@if $max {
-		$max-breakpoint: $max / $responsive-unitless * 100;
-		
-		@media (min-#{$dimension}: #{$max-breakpoint}) {
-			font-size: $max;
-		}
-	}
-	
-	@if $fallback {
-		font-size: $fallback;
-	}
-	
-	font-size: $responsive;
+// Shadow
+@mixin shadow($shadow-size, $shadow-color-1, $shadow-color-2) {
+
+	@if ($shadow-size == "xs") {
+    box-shadow: rem(0 2px 4px $shadow-color-1, 0 2px 4px $shadow-color-2);
+  }
+
+  @if ($shadow-size == "sm") {
+    box-shadow: rem(0 3px 6px $shadow-color-1, 0 3px 6px $shadow-color-2);
+  }
+  
+  @if ($shadow-size == "m") {
+    box-shadow: rem(0 9px 20px $shadow-color-1, 0 5px 6px $shadow-color-2);
+  }
+  
+  @if ($shadow-size == "l") {
+    box-shadow: rem(0 11px 28px $shadow-color-1, 0 8px 10px $shadow-color-2);
+  }
+  
+  @if ($shadow-size == "xl") {
+    box-shadow: rem(0 16px 38px $shadow-color-1, 0 12px 12px $shadow-color-2);
+  }
+  
+  @if ($shadow-size == "input") {
+    box-shadow: rem(0 5px 30px $shadow-color-1, 0 2px 15px $shadow-color-2);
+  }
+
+  @if ($shadow-size == "text") {
+    text-shadow: rem(0 2px 4px $shadow-color-1, 0 2px 4px $shadow-color-2);
+  }  
+
+  @if ($shadow-size == "xs-outline") {
+    box-shadow: rem(0 0px 2px $shadow-color-1, 0 0px 2px $shadow-color-2);
+  }
+
 }
 
-@mixin responsive-background($url, $height, $width, $margin:0) {
-	background-image: url($url);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	height: $height;
-	width: $width;
-}
-
+// Font Html Responsive
 @mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
 	& {
 		@each $property in $properties {
@@ -51,7 +56,6 @@
 	}
 }
 
-// Requires the calc-interpolation function which can also be used independently
 @function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
 	$a: ($max-value - $min-value) / ($max-screen - $min-screen);
 	$b: $min-value - $a * $min-screen; 

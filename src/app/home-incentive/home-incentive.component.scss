@@ -2,83 +2,137 @@
 @import '../../scss/variables';
 
 :host {
-    position: relative;
-    background-color: white;
-    box-shadow: 0px 3px 16px lightgray;
 
-    max-width: 15rem;
-    max-height: 12rem;
-    width: 90%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46.5%;
+    height: 28%;
+
+    @media (min-aspect-ratio: 3/3) and (min-width: $sm-breakpoint) {
+                
+        width: 30%;
+        height: 40%;
+            
+    }
+
+    background-color: $white;
+    box-shadow: $shadow-input;
 
     .incentive {
+
         height: 100%;
-    }
+        width: 100%;
+        
+        .hexa-grey {
 
-    .hexa-grey {
-        position: absolute;
-        top: -1rem;
-        left: calc(50% - 1rem);
-
-        margin: auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 2rem;
-        height: 2rem;
-        min-height: 2rem; // Bug sur le numéro 5 sans ça oO
-        background-image: url("/assets/img/incentives/hexa-grey.svg");
-        background-size: 100% 100%;
-    }
-
-    .content {
-        &:host {
-            height: 100%;
-        }
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 0.9rem 0.5rem;
-        padding-top: 1.9rem;
-
-        h2 {
-            justify-self: flex-end;
-            height: 30%;
-
-            text-align: center;
-            font-size: 0.8rem;
-            line-height: 0.95rem;
-
+            position: absolute;
+            top: -1rem;
+            left: calc(50% - 1rem);
+        
             display: flex;
             justify-content: center;
             align-items: center;
+        
+            width: 2rem;
+            height: 2rem;
+
+            font-size: rem(13px);
+
+            background-image: url("/assets/img/incentives/hexa-grey.svg");
+            background-size: 100% 100%;
+
         }
 
-        img {
-            max-height: 60%;
-            width: 36%;
+        .content {
 
-            &.share-moment {
-                width: 39.2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            height: 100%;
+
+            padding: rem(15% 8% 7% 8%);
+
+            @media (min-width: $md-breakpoint) {
+                
+                padding: 8% 20% 5% 20%;
+                    
             }
 
-            &.try-games {
-                width: 28.8%;
+            @media (min-aspect-ratio: 3/3) and (max-height: $md-breakpoint) {
+                
+                padding: rem(15% 11% 10% 11%);
+                    
             }
 
-            &.member-rewards {
-                width: 29.6%;
+            .picto-incentive {
+
+                height: 55%;
+                width: 100%;
+
+                background-size: 100% 100%;
+
+                margin-bottom: 3%;
+
+                @media (min-height: $md-breakpoint) {
+
+                    margin-bottom: 5%;
+
+                }
+
+                &.meet-neighbors {
+
+                    background-image: url('/assets/img/incentives/i-meet-neighbors.svg');
+    
+                }
+
+                &.advantages {
+
+                    background-image: url('/assets/img/incentives/i-advantages.svg');
+    
+                }
+
+                &.share-moment {
+                    
+                    background-image: url('/assets/img/incentives/i-share-moment.svg');
+    
+                }
+
+                &.try-games {
+
+                    background-image: url('/assets/img/incentives/i-try-games.svg');
+    
+                }
+
+                &.member-rewards {
+                    
+                    background-image: url('/assets/img/incentives/i-member-rewards.svg');
+    
+                }
+
+                &.play-everywhere {
+                    
+                    background-image: url('/assets/img/incentives/i-play-everywhere.svg');
+    
+                }
+
             }
 
-            &.play-everywhere {
-                width: 33.6%;
+            h2 {
+
+                font-size: rem(11px);
+                line-height: 1.25;
+                text-align: center;
+
             }
+            
         }
+
     }
-}
 
-@import 'mediaQueries';
+}

@@ -24,6 +24,54 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gametype-plateau:before {
+  content: "\e919";
+}
+.icon-gametype-ambiance:before {
+  content: "\e91a";
+}
+.icon-gametype-figurines:before {
+  content: "\e91b";
+}
+.icon-gametype-cartes:before {
+  content: "\e91c";
+}
+.icon-gametype-dés:before {
+  content: "\e91d";
+}
+.icon-gametype-classique:before {
+  content: "\e91e";
+}
+.icon-gametype-adresse:before {
+  content: "\e91f";
+}
+.icon-gametype-role:before {
+  content: "\e920";
+}
+.icon-gametype-enquete:before {
+  content: "\e921";
+}
+.icon-gametype-enfant:before {
+  content: "\e922";
+}
+.icon-gametype-reflexion:before {
+  content: "\e923";
+}
+.icon-gametype-rapidite:before {
+  content: "\e924";
+}
+.icon-nav-burger:before {
+  content: "\e918";
+}
+.icon-sign-pass:before {
+  content: "\e915";
+}
+.icon-sign-pass-forgot:before {
+  content: "\e916";
+}
+.icon-sign-pass-validation:before {
+  content: "\e917";
+}
 .icon-check:before {
   content: "\e914";
 }

@@ -1,10 +1,13 @@
 <div class="activity active" [ngClass]="{active: isActive}">
   <div class="cover" [ngClass]="activity.type">
       <div class="black-gradient">
-          <div class="game-type">
-              <img [src]="getBackgroundUrl(activity)" class="gametype-{{ activity.type }}" alt="Picto {{ activity.title }}">
-              <h2>{{ activity.title }}</h2>
-          </div>            
+            <div class="game-type">
+                <div class="game-picto">
+                    <i class="icon-gametype-{{ activity.type }}" ></i>
+                    <img src="/assets/img/activities/hexa-hobbpink-shadow.svg" alt="Picto {{ activity.title }}">        
+                </div>
+                <h2>{{ activity.title }}</h2>
+            </div>            
       </div>
   </div>
   <div class="text">

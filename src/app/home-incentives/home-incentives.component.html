@@ -2,9 +2,10 @@
     <div class="hexa-pattern"></div>
     <main>
         <h1>6 bonnes raisons d'utiliser <strong>Hobbees</strong></h1>
-
-        <app-home-incentive *ngFor="let incentive of incentives; index as i" [number]="i + 1" [name]="incentive.name" [name]="incentive.label">
-            {{ incentive.text }}
-        </app-home-incentive>
+        <div class="grid">
+            <app-home-incentive *ngFor="let incentive of incentives; index as i" [number]="i + 1" [name]="incentive.name" [name]="incentive.label">
+                {{ incentive.text }}
+            </app-home-incentive>            
+        </div>
     </main>
 </section>

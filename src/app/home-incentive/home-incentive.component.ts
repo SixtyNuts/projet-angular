@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HomeIncentiveComponent implements OnInit {
 
   @Input() number: number;
-  @Input() label: string;
   @Input() name: string;
 
   constructor() { }

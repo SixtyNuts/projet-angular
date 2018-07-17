@@ -48,14 +48,56 @@ export class HomeActivitiesComponent implements OnInit {
 `
       },
       {
-        type: 'connaissances',
+        type: 'reflexion',
         title: `Jeux de connaissances`,
         // tslint:disable-next-line:max-line-length
         description: `Des jeux pour tester votre culture générale ou bien vos connaissances sur un thème précis ou bien, en affrontant vos amis et votre famille.
                       Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
       },
       {
-        type: 'junior',
+        type: 'cartes',
+        title: `Jeux de cartes`,
+        // tslint:disable-next-line:max-line-length
+        description: `/// Des jeux pour tester votre culture générale ou bien vos connaissances sur un thème précis ou bien, en affrontant vos amis et votre famille.
+                      Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
+      },
+      {
+        type: 'dés',
+        title: `Jeux de dés`,
+        // tslint:disable-next-line:max-line-length
+        description: `/// Des jeux pour tester votre culture générale ou bien vos connaissances sur un thème précis ou bien, en affrontant vos amis et votre famille.
+                      Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
+      },
+      {
+        type: 'classique',
+        title: `Jeux classiques`,
+        // tslint:disable-next-line:max-line-length
+        description: `/// Des jeux pour tester votre culture générale ou bien vos connaissances sur un thème précis ou bien, en affrontant vos amis et votre famille.
+                      Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
+      },
+      {
+        type: 'enquete',
+        title: `Jeux d'enquête`,
+        // tslint:disable-next-line:max-line-length
+        description: `/// Des jeux pour tester votre culture générale ou bien vos connaissances sur un thème précis ou bien, en affrontant vos amis et votre famille.
+                      Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
+      },
+      {
+        type: 'figurines',
+        title: `Jeux de figurines`,
+        // tslint:disable-next-line:max-line-length
+        description: `/// Des jeux pour tester votre culture générale ou bien vos connaissances sur un thème précis ou bien, en affrontant vos amis et votre famille.
+                      Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
+      },
+      {
+        type: 'rapidite',
+        title: `Jeux de rapidité`,
+        // tslint:disable-next-line:max-line-length
+        description: `/// Des jeux pour tester votre culture générale ou bien vos rapidite sur un thème précis ou bien, en affrontant vos amis et votre famille.
+                      Rassurez-vous, ces jeux permettent en général de participer même lorsqu'on n'est pas un spécialiste.`
+      },
+      {
+        type: 'enfant',
         title: `Jeux pour les enfants`,
         // tslint:disable-next-line:max-line-length
         description: `Il existe de très nombreux jeux destinés aux enfants, qu'il s'agisse de jeux d'éveil pour les plus jeunes, ou bien de jeux de

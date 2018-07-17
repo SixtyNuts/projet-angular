@@ -6,15 +6,6 @@ app-sign-up, app-sign-in, app-forgot-password {
 
     @import "angularMaterialOverride";
 
-    header {
-
-        display: flex;
-        align-items: center;
-
-        height: rem(90px);
-
-    }
-
     main {
 
         display: grid;
