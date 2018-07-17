@@ -9,7 +9,7 @@ section.intro {
     align-items: center;
 
     height: 100vh;
-    min-height: 640px;
+    min-height: 480px;
 
     color: $white;
     @include shadow('text', $shadow-color-intro, $shadow-color-intro);
@@ -18,13 +18,27 @@ section.intro {
     background-position: top center;
     background-size: cover;
 
-    padding: rem(40px 40px 0 40px);
+    padding: rem(40px 30px 0 30px);
+
+    @media (min-width: $xs-breakpoint) {
+                
+        min-height: 640px;
+
+        padding: rem(40px 40px 0 40px);
+
+    }    
 
     @media (min-width: $md-breakpoint) {
                 
         min-height: 750px;
 
     }    
+
+    @media (min-aspect-ratio: 4/3) and (max-height: 470px) and (max-width: 850px) {
+                
+        min-height: 320px;
+
+    }
     
     .wrapper {
 
@@ -37,24 +51,35 @@ section.intro {
         max-width: 350px;
         height: 100%;
 
-        // @media (min-aspect-ratio: 4/3) and (max-height: $xs-breakpoint-height) {
+        @media (min-width: $lg-breakpoint) {
                 
-        //     width: 100%;
-        //     max-width: 520px;
+            max-width: 465px;
+    
+        } 
 
-        // }
-
+        @media (min-aspect-ratio: 4/3) and (max-height: 470px) and (max-width: 850px) {
+                
+            max-width: 550px;
+    
+        }
+    
         .logo {
 
             display: flex;
             justify-content: center;
             align-items: center;  
             
-            width: 70%;
-            max-width: rem(270px);
+            width: 60%;
+            max-width: rem(230px);
 
             margin-bottom: rem(-18px);
 
+            @media (min-width: $xs-breakpoint) {
+                
+                width: 70%;
+        
+            }    
+        
             svg {
 
                 width: 100%;
@@ -69,7 +94,7 @@ section.intro {
 
                 }
 
-                @media (max-height: 470px) and (max-width: $lg-breakpoint) {
+                @media (min-aspect-ratio: 4/3) and (max-height: 470px) and (max-width: 850px) {
 
                     position: fixed;
                     top: rem(-55px);
@@ -103,22 +128,66 @@ section.intro {
             align-items: center; 
              
             height: 34%;
-            // min-height: rem(150px);
-            max-height: rem(250px);
+            min-height: rem(160px);
+            max-height: rem(235px);
+
+            @media (min-width: $lg-breakpoint) {
                 
+                max-height: rem(215px);
+        
+            }
+
+            @media (min-aspect-ratio: 4/3) and (max-height: 320px) and (max-width: 850px) {
+                
+                min-height: rem(130px);
+        
+            }        
+         
             h1 {
 
-                font-size: rem(30px);
+                font-size: rem(25px);
                 font-weight: 500;
-                line-height: 1.16;
+                line-height: 1.05;
+
+                @media (min-width: $xs-breakpoint) {
+
+                    font-size: rem(30px);
+                    line-height: 1.16;
+
+                } 
+
+                @media (min-width: $lg-breakpoint) {
+                
+                    font-size: rem(34.5px);
+            
+                }
+                
+                @media (min-aspect-ratio: 4/3) and (max-height: 320px) and (max-width: 850px) {
+                
+                    font-size: rem(23px);
+            
+                }        
 
             }
 
             h2 {
 
-                font-size: rem(19px);
+                font-size: rem(15px);
                 font-weight: 300;
-                line-height: 1.45;
+                line-height: 1.4;
+
+                @media (min-width: $xs-breakpoint) {
+                    
+                    font-size: rem(19px);
+                    line-height: 1.45;
+
+                }
+
+                @media (min-aspect-ratio: 4/3) and (max-height: 320px) and (max-width: 850px) {
+                
+                    font-size: rem(18px);
+            
+                }        
                 
             }
 
@@ -126,17 +195,24 @@ section.intro {
                     
                 border-radius: rem(15px);
                 border: 1px solid $white;
-        
-                font-size: rem(13px);
+
+                font-size: rem(11px);
                 text-transform: uppercase;
 
                 @include shadow('xs-outline', $shadow-color-intro, $shadow-color-intro);
-
-                padding: rem(7px 19px);
+                
+                padding: rem(5px 16px);
                 margin-top: rem(8px);
 
                 transition: all 0.3;
-        
+
+                @media (min-width: $xs-breakpoint) {
+                
+                    font-size: rem(13px);
+                    padding: rem(7px 19px);
+
+                } 
+
             }
 
         }
@@ -149,9 +225,16 @@ section.intro {
             justify-content: space-between;
             
             width: 100%;
+            max-width: rem(360px);
             height: 14%;
-            // min-height: rem(82px);
+            min-height: rem(85px);
             max-height: rem(92px);
+
+            @media (min-aspect-ratio: 4/3) and (max-height: 470px) and (max-width: 850px) {
+                
+                max-width: 98%;
+        
+            }        
 
             .btn {
 
@@ -193,20 +276,31 @@ section.intro {
             
             p {
     
-                font-size: 15px;
+                font-size: 14px;
                 font-weight: 300;
                 line-height: 1.4;
                 text-align: center;
-    
+
+                @media (min-width: $xs-breakpoint) {
                 
+                    font-size: 15px;
+            
+                } 
+
                 a {
     
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: 500;
                     color: inherit;
                     text-transform: uppercase;
     
                     margin-left: rem(8px);
+
+                    @media (min-width: $xs-breakpoint) {
+                
+                        font-size: 15px;
+                
+                    } 
     
                 }
                     
