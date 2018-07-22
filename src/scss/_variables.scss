@@ -43,8 +43,6 @@ $gradient-verylightgrey-reverse: linear-gradient($verylightgrey 70%, white 100%)
 $gradient-pink-blue: linear-gradient(45deg, $blue 0%, $pink 100%);
 $gradient-pink: linear-gradient(to right, $purple 0%, $pinkurple 35%, $pinkurple 70%,$purple 100%);
 
-$shadow-color: rgba(14, 11, 56,0.10);
-$shadow-color-intro: rgba(14, 11, 56,0.20);
 
 $shadow-xs: rem(0 1px 3px rgba(172, 172, 172,0.12), 0 1px 2px rgba(66, 66, 66,0.24));
 $shadow-sm: rem(0 3px 6px rgba(172, 172, 172,0.16), 0 3px 6px rgba(66, 66, 66,0.23));

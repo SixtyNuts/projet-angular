@@ -31,29 +31,13 @@ header {
         font-size: rem(14px);
         color: $white;
         
-        @include shadow(text, $shadow-color-intro, $shadow-color-intro);
+        @include shadow('text', rgba(14, 11, 56,0.10), rgba(14, 11, 56,0.10));
 
         cursor: pointer;
 
     }
 
     transition: all 0.4s;
-
-    @media (max-height: 470px) and (max-width: $lg-breakpoint) {
-
-        height: rem(27px); 
-
-        nav {
-
-            .icon-nav-burger {
-        
-                font-size: rem(12px);
-            
-            }
-        
-        }
-
-    }   
 
 }
 
@@ -87,21 +71,32 @@ nav {
             text-decoration: none;
             color: inherit;
 
+            transition: all 0.3s;
+
             &:hover {
-                background-color: $accentColor;
-                color: white;
-                font-weight: 700;
                 cursor: pointer;
             }
         }
 
         .logo {
+
             img {
+
                 position: absolute;
-                bottom: -4.5rem;
-                left: calc(50% - 4.5rem);
-                width: 9rem;
-                height: 9rem;
+                bottom: -6rem;
+                left: calc(50% - 6rem);
+                width: 12rem;
+                height: 12rem;
+
+                @media (max-width: 360px) {
+
+                    position: absolute;
+                    bottom: -5rem;
+                    left: calc(50% - 5rem);
+                    width: 10rem;
+                    height: 10rem;
+            
+                }    
 
             }
         }
@@ -114,43 +109,142 @@ nav {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 0.98rem;
+            font-size: rem(18px);
             font-weight: 300;
 
-            padding: 1rem 0;
-
+            padding: 2rem 0 2.5rem 0;
 
             a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 0.6rem;
+
+                height: rem(45px);
                 width: 100%;
+                font-size: rem(17px);
+                font-weight: 400;
 
-                &:before {
-                    content: "";
+                margin: rem(5px 0);
 
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    margin-right: 0.3rem;
-                    background-repeat: no-repeat;
+                &:hover:not(.active) {
+                    background-color: $accentColor;
+                    color: white;
                 }
+    
+                i {
 
-                &.home:before { background-image: url(/assets/img/nav/i-home.svg) }
-                &.incentives:before { background-image: url(/assets/img/nav/i-incentives.svg) }
-                &.activities:before { background-image: url(/assets/img/nav/i-activities.svg) }
+                    font-size: rem(16px);
+
+                    margin-top: rem(-2px);
+                    margin-right: rem(10px);
+
+                    &.icon-nav-home {
+
+                        font-size: rem(15px);
+
+                        margin-right: rem(8px);
+
+                    }
+
+                    &.icon-nav-incentives {
+
+                        font-size: rem(15px);
+
+                    }
+
+                    &.icon-nav-board-game {
+
+                        font-size: rem(18px);
+
+                    }
+
+                    &.icon-nav-events {
+
+                        font-size: rem(17px);
+
+                    }
+
+                    &.icon-nav-search-game {
+
+                        font-size: rem(18px);
+
+                    }
+
+                    &.icon-nav-friends {
+
+                        font-size: rem(13.5px);
+
+                    }
+
+                }
 
                 &.active:not(:hover) {
                     color: $accentColor;
                 }
 
-                &.active, &:hover {
-                    font-size: 1.1rem;
-                    font-weight: 700;
+                &.active {
 
-                    &.home:before { background-image: url(/assets/img/nav/i-home-active.svg) }
-                    &.incentives:before { background-image: url(/assets/img/nav/i-incentives-active.svg) }
-                    &.activities:before { background-image: url(/assets/img/nav/i-activities-active.svg) }
+                    font-size: rem(19px);
+                    font-weight: 600;
+                    color: $accentColor;
+
+                    i {
+                        font-size: rem(18px);
+
+                        font-weight: 700;
+
+                        &.icon-nav-home {
+
+                            font-size: rem(17px);
+    
+                            margin-right: rem(8px);
+    
+                        }
+    
+                        &.icon-nav-incentives {
+    
+                            font-size: rem(17px);
+    
+                        }
+    
+                        &.icon-nav-board-game {
+    
+                            font-size: rem(20px);
+    
+                        }
+    
+                        &.icon-nav-events {
+    
+                            font-size: rem(19px);
+    
+                        }
+    
+                        &.icon-nav-search-game {
+    
+                            font-size: rem(20px);
+    
+                        }
+    
+                        &.icon-nav-friends {
+    
+                            font-size: rem(15.5px);
+    
+                        }
+
+                    }
+
+                }
+
+                @media (max-width: 360px) {
+
+                    font-size: rem(16px);
+
+                    &.active {
+
+                    font-size: rem(17px);
+
+                    }
+
                 }
 
             }
@@ -168,36 +262,23 @@ nav {
             &.signup, &.settings {
                 left: 0;
                 padding-right: $logoWidth / 2;
-
-                @media screen and (max-width: $lg-breakpoint) {
-                    a {
-                        justify-content: flex-start;
-                        padding-left: 1rem;
-                    }
-                }
             }
             &.signin, &.signout {
                 right: 0;
                 padding-left: $logoWidth / 2;
 
-                @media screen and (max-width: $lg-breakpoint) {
-                    a {
-                        justify-content: flex-end;
-                        padding-right: 1rem;
-                    }
-                }
             }
 
             text-transform: uppercase;
             color: #8A8A8A;
-            font-size: 0.75rem;
+            font-size: rem(14.5px);
             font-weight: 500;
 
             display: flex;
             align-items: center;
             padding: 0;
 
-            &:hover {
+            &:hover:not(.active) {
                 background: $accentColor;
                 color: white;
             }
@@ -211,30 +292,33 @@ nav {
                 justify-content: center;
                 align-items: center;
 
-                &:before {
-                    content: "";
+                i {
 
-                    width: 1rem;
-                    height: 1rem;
-                    margin-right: 0.3rem;
-                    margin-right: 0.3rem;
-                    background-repeat: no-repeat;
+                    font-size: rem(14px);
+
+                    margin-right: rem(6px);
+
                 }
 
             }
 
-        }
+            
+            @media (max-width: 360px) {
 
-        .signup, .settings {
-            justify-content: flex-start;
-            a:before { background-image: url(/assets/img/nav/i-signup.svg) }
-            a:hover:before { background-image: url(/assets/img/nav/i-signup-active.svg) }
-        }
+                font-size: rem(13.5px);
+                
+                &.signup, &.settings {
+                    left: 0;
+                    padding-right: 40px;
+                }
+                &.signin, &.signout {
+                    right: 0;
+                    padding-left: 40px;
+    
+                }
+    
+            }
 
-        .signin, .signout {
-            justify-content: flex-end;
-            a:before { background-image: url(/assets/img/nav/i-signin.svg) }
-            a:hover:before { background-image: url(/assets/img/nav/i-signin-active.svg) }
         }
 
     }

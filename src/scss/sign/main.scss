@@ -34,7 +34,7 @@ app-sign-up, app-sign-in, app-forgot-password {
             font-weight: 300;
             color: $darkgrey;
 
-            margin: rem(25px 0 10px 0);
+            margin: rem(30px 0 18px 0);
 
             i {
 
@@ -57,6 +57,8 @@ app-sign-up, app-sign-in, app-forgot-password {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            height: rem(35px);
 
             font-size: rem(11px);
             font-weight: 700;
@@ -315,18 +317,66 @@ app-sign-up, app-sign-in, app-forgot-password {
 
 
             }
+
+            .btn {
+
+                padding: rem(8px);
+    
+            }       
         
         }
 
     }
 
-    footer.sign {
+    .sign {
 
-        .forgot-password {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-            border-bottom: 1px solid $grey; 
+        color: $darkgrey;
+        
+        width: 100%;
+        
+        p {
+
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+            text-align: center;
+
+            padding: rem(20px);
+
+            @media (min-width: $xs-breakpoint) {
+            
+                font-size: 15px;
+        
+            }
+
+            &.forgot-password {
+
+                border-bottom: 1px solid $grey; 
+            }    
+
+            a {
+
+                font-size: 13px;
+                font-weight: 500;
+                color: inherit;
+                text-transform: uppercase;
+
+                margin-left: rem(8px);
+
+                @media (min-width: $xs-breakpoint) {
+            
+                    font-size: 15px;
+            
+                } 
+
+            }
+                
         }
-
     }
 
 }

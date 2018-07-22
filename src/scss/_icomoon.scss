@@ -24,44 +24,70 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-arrow-prev:before {
+  content: "\e925";
+}
+.icon-arrow-next:before {
+  content: "\e926";
+}
+.icon-youtube2:before {
+  content: "\e928";
+}
+.icon-facebook3:before {
+  content: "\e927";
+}
 .icon-gametype-plateau:before {
   content: "\e919";
+  color: #fff;
 }
 .icon-gametype-ambiance:before {
   content: "\e91a";
+  color: #fff;
 }
 .icon-gametype-figurines:before {
   content: "\e91b";
+  color: #fff;
 }
 .icon-gametype-cartes:before {
   content: "\e91c";
+  color: #fff;
 }
-.icon-gametype-dés:before {
+.icon-gametype-des:before {
   content: "\e91d";
+  color: #fff;
 }
 .icon-gametype-classique:before {
   content: "\e91e";
+  color: #fff;
 }
 .icon-gametype-adresse:before {
   content: "\e91f";
+  color: #fff;
 }
 .icon-gametype-role:before {
   content: "\e920";
+  color: #fff;
 }
 .icon-gametype-enquete:before {
   content: "\e921";
+  color: #fff;
 }
 .icon-gametype-enfant:before {
   content: "\e922";
+  color: #fff;
 }
 .icon-gametype-reflexion:before {
   content: "\e923";
+  color: #fff;
 }
 .icon-gametype-rapidite:before {
   content: "\e924";
+  color: #fff;
 }
 .icon-nav-burger:before {
   content: "\e918";
+  color: #fff;
 }
 .icon-sign-pass:before {
   content: "\e915";

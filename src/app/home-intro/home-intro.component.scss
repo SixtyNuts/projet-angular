@@ -12,7 +12,7 @@ section.intro {
     min-height: 480px;
 
     color: $white;
-    @include shadow('text', $shadow-color-intro, $shadow-color-intro);
+    @include shadow('text', rgba(14, 11, 56,0.10), rgba(14, 11, 56,0.10));
 
     background-image: url('/assets/img/intro/bg-gradient.jpg');
     background-position: top center;
@@ -84,23 +84,47 @@ section.intro {
 
                 width: 100%;
                 max-width: 100%;
-                max-height: 100%;
+                max-height: 23%;
 
                 transition: all 0.4s;
 
                 .svg-logo-mark path, .svg-logo-bees path {
 
-                    transition: all 0.5s;
+                    transition: all 0.3s;
+
+                }
+
+                &.switchtop {
+
+                    position: fixed;
+                    top: rem(-63px);
+                    z-index: 100;
+
+                    width: rem(145px);
+
+                    .svg-logo-mark path {
+
+                        fill: #151515;
+
+                    }
+
+                      .svg-logo-bees path {
+
+                        fill: #151515;
+
+                    }
 
                 }
 
                 @media (min-aspect-ratio: 4/3) and (max-height: 470px) and (max-width: 850px) {
+                    
+                    max-height: 35%;
 
                     position: fixed;
-                    top: rem(-55px);
+                    top: rem(-63px);
                     z-index: 100;
 
-                    width: rem(120px);
+                    width: rem(145px);
 
                     .svg-logo-mark path {
 
@@ -199,7 +223,7 @@ section.intro {
                 font-size: rem(11px);
                 text-transform: uppercase;
 
-                @include shadow('xs-outline', $shadow-color-intro, $shadow-color-intro);
+                @include shadow('xs-outline', rgba(14, 11, 56,0.10), rgba(14, 11, 56,0.10));
                 
                 padding: rem(5px 16px);
                 margin-top: rem(8px);
@@ -238,41 +262,9 @@ section.intro {
 
             .btn {
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-        
-                width: 99%;
-                border-radius: 2px;
-        
-                font-size: 15px;
-                text-transform: uppercase;
                 text-shadow: none;
                 
-                padding: 14px;
-        
-                @include shadow(xs, $shadow-color-intro, $shadow-color-intro);
-        
-                transition: all 0.3s;
-        
-                &:hover {
-        
-                    width: 100%;
-        
-                    @include shadow(m, $shadow-color-intro, $shadow-color-intro);
-        
-                }
-                
-                &.btn-white {
-
-                    font-weight: 700; 
-                    color: $black;
-
-                    background-color: $white;
-
-                }
-    
-            }    
+            }   
             
             p {
     

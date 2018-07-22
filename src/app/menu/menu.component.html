@@ -3,6 +3,7 @@
     <ng-container *ngIf="authenticationService.currentUserToken == null">
         <div class="icon-nav-burger" *ngIf="!isOpen" (click)="open()"></div>
         <div class="main-nav">
+    
             <a  *ngIf="fragment === 'intro'"
                 routerLink="/"
                 routerLinkActive="active"
@@ -10,7 +11,7 @@
                 class="home"
                 (click)="close()"
             >
-                Accueil
+                <i class="icon-nav-home"></i>Accueil
             </a>
             <a  *ngIf="fragment !== 'intro'"
                 routerLink="/"
@@ -18,7 +19,7 @@
                 class="home"
                 (click)="close()"
             >
-                Accueil
+                <i class="icon-nav-home"></i>Accueil
             </a>
             <a  *ngIf="fragment === 'incentives'"
                 routerLink="/"
@@ -27,7 +28,7 @@
                 class="incentives"
                 (click)="close()"
             >
-                6 bonnes raisons d'utiliser Hobbees
+                <i class="icon-nav-incentives"></i>6 bonnes raisons d'utiliser Hobbees
             </a>
             <a  *ngIf="fragment !== 'incentives'"
                 routerLink="/"
@@ -35,7 +36,7 @@
                 class="incentives"
                 (click)="close()"
             >
-                6 bonnes raisons d'utiliser Hobbees
+                <i class="icon-nav-incentives"></i>6 bonnes raisons d'utiliser Hobbees
             </a>
             <a  *ngIf="fragment === 'activities'"
                 routerLink="/"
@@ -44,7 +45,7 @@
                 class="activities"
                 (click)="close()"
             >
-                Activités ludiques
+                <i class="icon-nav-board-game"></i>Activités ludiques
             </a>
             <a  *ngIf="fragment !== 'activities'"
                 routerLink="/"
@@ -52,38 +53,38 @@
                 class="activities"
                 (click)="close()"
             >
-                Activités ludiques
+                <i class="icon-nav-board-game"></i>Activités ludiques
             </a>
         </div>
         <div class="signup">
-            <a routerLink="/inscription">Inscription</a>
+            <a routerLink="/inscription"><i class="icon-nav-sign-up"></i>Inscription</a>
         </div>
         <div class="signin">
-            <a routerLink="/connexion">Connexion</a>
+            <a routerLink="/connexion"><i class="icon-nav-sign-in"></i>Connexion</a>
         </div>
     </ng-container>
     <ng-container *ngIf="authenticationService.currentUserToken != null">
         <!--@TODO : Menu à designer pour la partie connectée -->
         <div class="icon-nav-burger" *ngIf="!isOpen" (click)="open()"></div>
         <div class="main-nav">
-            <a routerLink="/evenements" class="events" (click)="close()">Évènements</a>
-            <a routerLink="/recherche-de-jeux" class="search-game" (click)="close()">Rechercher un jeu</a>
-            <a routerLink="/profil" class="profile" (click)="close()">Mon profil</a>
-            <a routerLink="/adresses" class="addresses" (click)="close()">Mes adresses</a>
-            <a routerLink="/amis" class="friends" (click)="close()">Mes amis</a>
-            <a routerLink="/beecoins" class="beecoins" (click)="close()">Mes Beecoins</a>
-            <a routerLink="/envies" class="wishlist" (click)="close()">Ma liste d'envies</a>
-            <a routerLink="/notifications" class="notifications" (click)="close()">Notifications</a>
+            <a routerLink="/evenements" class="events" (click)="close()"><i class="icon-nav-events"></i>Évènements</a>
+            <a routerLink="/recherche-de-jeux" class="search-game" (click)="close()"><i class="icon-nav-search-game"></i>Rechercher un jeu</a>
+            <a routerLink="/profil" class="profile" (click)="close()"><i class="icon-nav-profil"></i>Mon profil</a>
+            <a routerLink="/adresses" class="addresses" (click)="close()"><i class="icon-nav-adress"></i>Mes adresses</a>
+            <a routerLink="/amis" class="friends" (click)="close()"><i class="icon-nav-friends"></i>Mes amis</a>
+            <a routerLink="/beecoins" class="beecoins" (click)="close()"><i class="icon-nav-beecoins"></i>Mes Beecoins</a>
+            <a routerLink="/envies" class="wishlist" (click)="close()"><i class="icon-nav-board-game"></i>Ma liste d'envies</a>
+            <a routerLink="/notifications" class="notifications" (click)="close()"><i class="icon-nav-notifications"></i>Notifications</a>
             <a href="/profil" class="activities" (click)="close()">
                 <div>Avatar</div>
                 <div>Pseudo</div>
             </a>
         </div>
         <div class="settings">
-            <a routerLink="/parametres">Paramètres</a>
+            <a routerLink="/parametres"><i class="icon-nav-parameter"></i>Paramètres</a>
         </div>
         <div class="signout">
-            <a routerLink="/deconnexion" (click)="authenticationService.logout()">Déconnexion</a>
+            <a routerLink="/deconnexion" (click)="authenticationService.logout()"><i class="icon-nav-sign-out"></i>Déconnexion</a>
         </div>
     </ng-container>
     <div class="logo">

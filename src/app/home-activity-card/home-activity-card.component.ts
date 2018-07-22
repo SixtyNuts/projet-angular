@@ -13,10 +13,6 @@ export class HomeActivityCardComponent implements OnInit {
 
   constructor() { }
 
-  getBackgroundUrl(activity: Activity) {
-    return `/assets/img/activities/i-gametype-${activity.type}.svg`;
-  }
-
   ngOnInit() {
   }
 

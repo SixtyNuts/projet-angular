@@ -27,7 +27,7 @@
     }
 
     background-color: $white;
-    box-shadow: $shadow-input;
+    @include shadow('input', rgba(14, 11, 56,0.10), rgba(14, 11, 56,0.10));
 
     .incentive {
 
