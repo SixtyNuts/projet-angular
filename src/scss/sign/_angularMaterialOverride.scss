@@ -70,3 +70,37 @@ mat-form-field.mat-form-field {
         }
     }
 }
+
+    
+.input {
+
+    &.input-submit {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 0;
+
+    }
+
+    &.input-terms-and-conditions {
+
+        margin-bottom : rem(24px);         
+
+        label.mat-checkbox-layout  {
+
+            position: inherit;
+                
+        }
+    }
+
+}
+
+
+        .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    
+            top: rem(15px);
+
+        }
+    

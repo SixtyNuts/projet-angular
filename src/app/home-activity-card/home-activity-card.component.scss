@@ -12,6 +12,24 @@
 
         height: 45%;
 
+        transition: height 0.3s;
+
+        @media (max-height: 710px) {
+                           
+            height: 40%;
+            
+        }
+
+        @media (min-height: 850px) {
+                           
+            &.active {
+
+                height: 60%;
+    
+            }
+            
+        }
+
         background-size: cover;
 
         &.ambiance {
@@ -162,7 +180,25 @@
         align-items: center;
 
         height: 55%;
+
+        transition: height 0.3s;
+
+        @media (max-height: 710px) {
+                           
+            height: 60%;
+            
+        }
+
+        @media (min-height: 850px) {
+                           
+            &.active {
+
+                height: 40%;
+    
+            }
         
+        }
+
         padding: rem(15px 21px 18px 21px);
 
         p {

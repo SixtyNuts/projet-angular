@@ -18,8 +18,8 @@ section.activities {
     @media (min-width: $md-breakpoint) {
 
         height: 85vh;
-
         min-height: 750px;
+        max-height: 1000px;
 
     }
 
@@ -80,7 +80,7 @@ section.activities {
                     flex-shrink: 0;
 
                     width: 280px;
-                    height: 75%;
+                    height: 80%;
 
                     margin: 8px;
 

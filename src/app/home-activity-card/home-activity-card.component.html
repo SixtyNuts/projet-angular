@@ -1,5 +1,5 @@
 <div class="activity" [ngClass]="{active: isActive}">
-  <div class="cover" [ngClass]="activity.type">
+  <div class="cover {{ activity.type }}" [ngClass]="{active: isActive}">
       <div class="black-gradient">
             <div class="game-type">
                 <div class="game-picto">
@@ -10,7 +10,7 @@
             </div>            
       </div>
   </div>
-  <div class="text">
+  <div class="text" [ngClass]="{active: isActive}">
       <p>
           {{ activity.description }}
       </p>

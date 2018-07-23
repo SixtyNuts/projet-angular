@@ -138,8 +138,7 @@ app-sign-up, app-sign-in, app-forgot-password {
                     font-size: rem(15px); 
                     color: $darkgrey;
 
-                    padding-left: rem(15px);
-                    padding-top: 15px;
+                    padding: rem(15px 15px 0 15px);
 
                     box-shadow: $shadow-input;
                     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -339,44 +338,58 @@ app-sign-up, app-sign-in, app-forgot-password {
         
         width: 100%;
         
-        p {
+        .sign-grey {
 
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 1.4;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-            padding: rem(20px);
+            width: 22%;
+    
+            p {
 
-            @media (min-width: $xs-breakpoint) {
-            
-                font-size: 15px;
-        
-            }
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.4;
+                text-align: center;
 
-            &.forgot-password {
+                width: 100%;
 
-                border-bottom: 1px solid $grey; 
-            }    
-
-            a {
-
-                font-size: 13px;
-                font-weight: 500;
-                color: inherit;
-                text-transform: uppercase;
-
-                margin-left: rem(8px);
-
+                padding: rem(22px);
+    
                 @media (min-width: $xs-breakpoint) {
-            
+                
                     font-size: 15px;
             
-                } 
-
-            }
+                }
+    
+                &.forgot-password {
+    
+                    border-bottom: 1px solid $grey; 
+                }    
+    
+                a {
+    
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: inherit;
+                    text-transform: uppercase;
+    
+                    margin-left: rem(8px);
+    
+                    @media (min-width: $xs-breakpoint) {
                 
+                        font-size: 15px;
+                
+                    } 
+    
+                }
+                    
+            }
+    
         }
+
     }
 
 }
